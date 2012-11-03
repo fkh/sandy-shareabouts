@@ -119,7 +119,19 @@ place:
       name: address
       attrs:
         - key: placeholder
-          value: "Location/address"
+          value: "Location/street"
+    - prompt: Zip
+      type: text
+      name: zip
+      attrs:
+        - key: placeholder
+          value: "5 digit zip"
+    - prompt: Borough or Municipality
+      type: text
+      name: borough
+      attrs:
+        - key: placeholder
+          value: "Borough or Muni"
     - prompt: When?
       type: textarea
       name: when
