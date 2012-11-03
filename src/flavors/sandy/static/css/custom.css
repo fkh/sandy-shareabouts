@@ -191,6 +191,10 @@ a.reply-link:hover {
 /*  border-bottom: 0.5em solid #806080;*/
 }
 
+#user_support {
+  visibility: hidden;
+}
+
 #user_support label {
   color: #fff;
   background-color: #00994d;
