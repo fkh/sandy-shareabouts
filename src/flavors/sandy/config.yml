@@ -163,13 +163,12 @@ place:
           value: url
         - key: size
           value: 30
-    - prompt: Other details
+    - prompt: Details
       type: textarea
       name: description
-      optional: true
       attrs:
         - key: placeholder
-          value: (e.g. source of info)
+          value: "Explain what's going on"
 
 survey:
   submission_type: comments
