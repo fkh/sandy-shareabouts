@@ -1,0 +1,204 @@
+# Settings for the app
+app:
+  # HTML Title
+  title: "#SandyVolunteer"
+  # Header name
+  name: "#SandyVolunteer"
+  # Meta description that will show up in Google search results
+  meta_description: "Mapping information from #SandyVolunteer about volunteering opportunities and donation sites for Sandy cleanup."
+
+# Settings for map and layer configs
+map:
+  options:
+    center:
+      lat: 40.784896
+      lng: -73.976026
+    zoom: 10
+    minZoom: 9
+    maxZoom: 17
+  base_layer:
+    url: http://{s}.tiles.mapbox.com/v3/mapbox.mapbox-streets/{z}/{x}/{y}.png
+    attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+  layers: []
+
+# The keys show up in the dropdown list when you are adding a new place
+# The values map the place type to map icons (defined below).
+place_types:
+  Donation dropoff:
+    default: green_feature
+    focused: green_focused
+  Volunteering for cleanup:
+    default: yellow_feature
+    focused: yellow_focused
+  Volunteering for shelter help:
+    default: red_feature
+    focused: red_focused
+
+# Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
+# for documention of each property. Any omitted property will be undefined.
+place_type_icons:
+  yellow_feature:
+    iconUrl: /static/css/images/feature-point-yellow.png
+    iconSize:
+      width: 17
+      height: 18
+    iconAnchor:
+      x: 9
+      y: 9
+  red_feature:
+    iconUrl: /static/css/images/feature-point-red.png
+    iconSize:
+      width: 17
+      height: 18
+    iconAnchor:
+      x: 9
+      y: 9
+  green_feature:
+    iconUrl: /static/css/images/feature-point-green.png
+    iconSize:
+      width: 17
+      height: 18
+    iconAnchor:
+      x: 9
+      y: 9
+  yellow_focused:
+    iconUrl: /static/css/images/marker-focused-yellow.png
+    shadowUrl: /static/css/images/marker-shadow.png
+    iconSize:
+      width: 25
+      height: 41
+    shadowSize:
+      width: 41
+      height: 41
+    iconAnchor:
+      x: 12
+      y: 41
+  red_focused:
+    iconUrl: /static/css/images/marker-focused-red.png
+    shadowUrl: /static/css/images/marker-shadow.png
+    iconSize:
+      width: 25
+      height: 41
+    shadowSize:
+      width: 41
+      height: 41
+    iconAnchor:
+      x: 12
+      y: 41
+  green_focused:
+    iconUrl: /static/css/images/marker-focused-green.png
+    shadowUrl: /static/css/images/marker-shadow.png
+    iconSize:
+      width: 25
+      height: 41
+    shadowSize:
+      width: 41
+      height: 41
+    iconAnchor:
+      x: 12
+      y: 41
+
+place:
+  adding_supported: true
+  title: Details
+  add_button_label: Add a location
+  action_text: identified
+  anonymous_name: Someone
+  submit_button_label: Submit
+  items:
+    - prompt: What?
+      type: text
+      name: name
+      attrs:
+        - key: placeholder
+          value: "what"
+        - key: size
+          value: 30
+    - prompt: Where?
+      type: textarea
+      name: address
+      attrs:
+        - key: placeholder
+          value: "Location/address"
+    - prompt: When?
+      type: textarea
+      name: when
+      attrs:
+        - key: placeholder
+          value: "When is help needed?"
+    - prompt: Activity type
+      type: select
+      options:
+        - Donation dropoff
+        - Volunteering for cleanup
+        - Volunteering for shelter help 
+      name: location_type
+    - prompt: Your Name
+      type: text
+      name: submitter_name
+      optional: true
+      attrs:
+        - key: placeholder
+          value: Name
+        - key: size
+          value: 30
+    - prompt: Other details
+      type: textarea
+      name: description
+      optional: true
+      attrs:
+        - key: placeholder
+          value: (e.g. source of info)
+
+survey:
+  submission_type: comments
+
+  # Response display config
+  show_responses: true
+  response_name: comment
+  response_plural_name: comments
+  action_text: commented on
+  anonymous_name: Someone
+
+  # Survey form config
+  title: Add comments or corrections
+  form_link_text: Leave a Comment
+  submit_btn_text: Comment
+  items:
+    - prompt: Comment
+      label: Comment
+      type: textarea
+      name: comment
+    - prompt: Your Name
+      type: text
+      name: submitter_name
+
+support:
+  submission_type: support
+  submit_btn_text: Support This!
+  action_text: supported
+  anonymous_name: Someone
+
+pages:
+  - title: About
+    slug: about
+    url: /static/pages/about.html
+    start_page: true
+
+  - title: Filter location types
+    pages:
+      - title: All
+        external: true
+        url: /
+
+      - title: Donation dropoff
+        external: true
+        url: /donation dropoff
+      
+      - title: Volunteering for cleanup
+        external: true
+        url: /volunteering for cleanup
+
+      - title: Volunteering for shelter help
+        external: true
+        url: /volunteering for shelter help
