@@ -154,6 +154,15 @@ place:
           value: Name
         - key: size
           value: 30
+    - prompt: Website
+      type: text
+      name: info_url
+      optional: true
+      attrs:
+        - key: placeholder
+          value: url
+        - key: size
+          value: 30
     - prompt: Other details
       type: textarea
       name: description
