@@ -10,13 +10,13 @@
         <section class="place-items">
           <p>Location: {{ address }} {{ zip }} {{ borough }}</a></p>
 
-          {{#when}}<div class="when-odd"><p>Saturday 11/3: {{ when }}</p></div>{{/when}}
+          {{#when}}<div class="when"><p>Saturday 11/3: {{ when }}</p></div>{{/when}}
           
-          {{#when-sun}} <div class="when-eve"><p>Sunday 11/4: {{ when-sun }}</p></div> {{/when-sun}} 
+          {{#when-sun}} <div class="when"><p>Sunday 11/4: {{ when-sun }}</p></div> {{/when-sun}} 
           
-          {{#when-mon}} <div class="when-odd"><p>Monday 11/5: {{ when-mon }}</p></div> {{/when-mon}} 
+          {{#when-mon}} <div class="when"><p>Monday 11/5: {{ when-mon }}</p></div> {{/when-mon}} 
           
-          {{#when-beyond}} <div class="when-eve"><p>Beyond: {{ when-beyond }}</p></div>{{/when-beyond}}
+          {{#when-beyond}} <div class="when"><p>Beyond: {{ when-beyond }}</p></div>{{/when-beyond}}
           
           <hr/>
           <p>{{ description }}</p>
