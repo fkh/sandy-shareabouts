@@ -9,7 +9,7 @@
 
 body, select, input, textarea {
   color: #444;
-  font-family: Futura, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-family: Arial, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
 
@@ -24,6 +24,15 @@ a:hover {
   color: #00cc66;
 }
 
+a.reply-link {
+  background: #A3C7D9;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: none;
+  float: right;
+  position: relative;
+}
 
 /* =The Site Header
 -------------------------------------------------------------- */

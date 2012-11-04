@@ -1,5 +1,6 @@
         <section class="promotion clearfix">
           <div class="support"></div>
+           {{ location_type }} <a href="#reply" class="reply-link">Comments/corrections/additions?</a>
         </section>
 
         <header class="place-header clearfix">
@@ -8,19 +9,23 @@
         
         <section class="place-items">
           <p>Location: {{ address }} {{ zip }} {{ borough }}</a></p>
-          <hr/>
-          <div class="when-odd"><p>Saturday 11/3: {{ when }}</p></div>
-          <div class="when-eve"><p>Sunday 11/4: {{ when-sun }}</p></div>
-          <div class="when-odd"><p>Monday 11/5: {{ when-mon }}</p></div>
-          <div class="when-eve"><p>Beyond: {{ when-beyond }}</p></div>
+
+          {{#when}}<div class="when-odd"><p>Saturday 11/3: {{ when }}</p></div>{{/when}}
+          
+          {{#when-sun}} <div class="when-eve"><p>Sunday 11/4: {{ when-sun }}</p></div> {{/when-sun}} 
+          
+          {{#when-mon}} <div class="when-odd"><p>Monday 11/5: {{ when-mon }}</p></div> {{/when-mon}} 
+          
+          {{#when-beyond}} <div class="when-eve"><p>Beyond: {{ when-beyond }}</p></div>{{/when-beyond}}
+          
           <hr/>
           <p>{{ description }}</p>
           <hr/>
           <p>Contact: {{ contact_info }}</p>            
-          <p>More info/source: <a href="{{ info_url }}">{{ info_url }}</a></p>
+          {{#info_url}} <p>More info/source: <a href="{{ info_url }}">{{ info_url }}</a></p> {{/info_url}}
           <div class="social">Share this activity:
             <ul class="sharing">
-              <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?source=webclient&text={{ permalink }}" target="_blank">Tweet This</a></li>
+              <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?source=webclient&text={{ name }} {{ permalink }} %23SandyVolunteers" target="_blank">Tweet This</a></li>
               <li class="share-link share-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}" target="_blank">Recommend on Facebook</a></li>
             </ul>
           </div>

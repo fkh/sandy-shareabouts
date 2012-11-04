@@ -132,12 +132,6 @@ place:
       attrs:
         - key: placeholder
           value: "Borough or Muni"
-    - prompt: When?
-      type: textarea
-      name: when
-      attrs:
-        - key: placeholder
-          value: "When is help needed?"
     - prompt: When on Saturday?
       type: textarea
       name: when
