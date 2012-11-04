@@ -8,20 +8,22 @@
         </header>
         
         <section class="place-items">
-          <p>Location: {{ address }} {{ zip }} {{ borough }}</a></p>
+          
+          <div class="longtext"><p><strong>Location</strong><br/>{{ address }} {{ zip }} {{ borough }}</a></p></div>
 
-          {{#when}}<div class="when"><p>Saturday 11/3: {{ when }}</p></div>{{/when}}
+         <strong>When</strong>{{#when}}<div class="when"><p>Saturday 11/3: {{ when }}</p></div>{{/when}}
           
           {{#when-sun}} <div class="when"><p>Sunday 11/4: {{ when-sun }}</p></div> {{/when-sun}} 
           
           {{#when-mon}} <div class="when"><p>Monday 11/5: {{ when-mon }}</p></div> {{/when-mon}} 
           
           {{#when-beyond}} <div class="when"><p>Beyond: {{ when-beyond }}</p></div>{{/when-beyond}}
+
+          <div class="longtext"><strong>Help needed</strong><br/>{{ description }}</div>
+
+          <p><strong>Contact</strong><br/>{{ contact_info }}</p>     
           
-          <hr/>
-          <p>{{ description }}</p>
-          <hr/>
-          <p>Contact: {{ contact_info }}</p>            
+
           {{#info_url}} <p>More info/source: <a href="{{ info_url }}">{{ info_url }}</a></p> {{/info_url}}
           <div class="social">Share this activity:
             <ul class="sharing">

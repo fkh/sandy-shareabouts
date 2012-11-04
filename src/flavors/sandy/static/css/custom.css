@@ -197,11 +197,7 @@ p.place-value-description {
   white-space: pre-wrap;
 }
 
-p.place-value-address {
-  white-space: pre-wrap;
-}
-
-p.place-value-when {
+.longtext {
   white-space: pre-wrap;
 }
 
