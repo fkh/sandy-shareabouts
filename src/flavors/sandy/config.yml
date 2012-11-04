@@ -143,7 +143,7 @@ place:
       name: when-sun
     - prompt: When on Monday?
       type: textarea
-      name: when=mon
+      name: when-mon
     - prompt: When beyond Monday?
       type: textarea
       name: when-beyond
@@ -218,7 +218,9 @@ pages:
     slug: about
     url: /static/pages/about.html
     start_page: true
-
+  - title: Data
+    slug: data
+    url: /static/pages/data.html
   - title: Filter location types
     pages:
       - title: All
