@@ -132,20 +132,26 @@ place:
       attrs:
         - key: placeholder
           value: "Borough or Muni"
-    - prompt: When on Saturday?
+    - prompt: "EITHER -- When in general?"
       type: textarea
       name: when
       attrs:
         - key: placeholder
-          value: "When is help needed?"
-    - prompt: When on Sunday?
+          value: "e.g. every day from 10am until it gets dark"
+    - prompt: "OR --- specifics.... When on Saturday?"
+      type: text
+      name: when-sat
+      attrs:
+        - key: placeholder
+          value: "e.g. 10am-5pm"
+    - prompt: ...when on Sunday?
       type: text
       name: when-sun
-    - prompt: When on Monday?
-      type: textarea
+    - prompt: ...when on Monday?
+      type: text
       name: when-mon
-    - prompt: When beyond Monday?
-      type: textarea
+    - prompt: ...when after Monday?
+      type: text
       name: when-beyond
     - prompt: Activity type
       type: select
