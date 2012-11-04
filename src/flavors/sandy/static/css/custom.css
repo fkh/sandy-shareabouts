@@ -183,6 +183,26 @@ a.reply-link:hover {
   background-color: #00994d;
 }
 
+/* preserving whitespace */
+p.place-value-description {
+  white-space: pre-wrap;
+}
+
+p.place-value-address {
+  white-space: pre-wrap;
+}
+
+p.place-value-when {
+  white-space: pre-wrap;
+}
+
+.when-odd {
+  background: #f0ffff;
+}
+
+h4.survey-header {
+  visibility: hidden;
+}
 
 /* =Voting & Social Promotion
 -------------------------------------------------------------- */
@@ -206,6 +226,9 @@ a.reply-link:hover {
   background-color: #fff;
 }
 
+.social {
+  float: none;
+}
 
 /* =The Ticker
 -------------------------------------------------------------- */

@@ -138,6 +138,21 @@ place:
       attrs:
         - key: placeholder
           value: "When is help needed?"
+    - prompt: When on Saturday?
+      type: textarea
+      name: when
+      attrs:
+        - key: placeholder
+          value: "When is help needed?"
+    - prompt: When on Sunday?
+      type: text
+      name: when-sun
+    - prompt: When on Monday?
+      type: textarea
+      name: when=mon
+    - prompt: When beyond Monday?
+      type: textarea
+      name: when-beyond
     - prompt: Activity type
       type: select
       options:
@@ -145,6 +160,27 @@ place:
         - Volunteering for cleanup
         - Volunteering for shelter help 
       name: location_type
+    - prompt: "Source/more info"
+      type: text
+      name: info_url
+      optional: true
+      attrs:
+        - key: placeholder
+          value: url
+        - key: size
+          value: 30
+    - prompt: Contact info
+      type: textarea
+      name: contact_info
+      attrs:
+        - key: placeholder
+          value: "Who to contact for more info"
+    - prompt: Details
+      type: textarea
+      name: description
+      attrs:
+        - key: placeholder
+          value: "Explain what's going on"
     - prompt: Your Name
       type: text
       name: submitter_name
@@ -154,22 +190,6 @@ place:
           value: Name
         - key: size
           value: 30
-    - prompt: Website
-      type: text
-      name: info_url
-      optional: true
-      attrs:
-        - key: placeholder
-          value: url
-        - key: size
-          value: 30
-    - prompt: Details
-      type: textarea
-      name: description
-      attrs:
-        - key: placeholder
-          value: "Explain what's going on"
-
 survey:
   submission_type: comments
 

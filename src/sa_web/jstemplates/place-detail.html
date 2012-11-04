@@ -1,24 +1,30 @@
         <section class="promotion clearfix">
           <div class="support"></div>
-          <div class="social"> Share this activity: 
-            <ul class="sharing">
-              <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?source=webclient&text={{ permalink }}" target="_blank">Tweet This</a></li>
-              <li class="share-link share-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}" target="_blank">Recommend on Facebook</a></li>
-            </ul>
-          </div>
         </section>
 
         <header class="place-header clearfix">
           <h1>{{ name }}</h1>
         </header>
-
+        
         <section class="place-items">
-          {{# items }}
-          <div class="place-item place-item-{{ name }}">
-            <span class="place-label place-label-{{ name }}">{{ label }}</span>
-            <p class="place-value place-value-{{ name }}">{{ value }}</p>
+          <p>Location: {{ address }} {{ zip }} {{ borough }}</a></p>
+          <hr/>
+          <div class="when-odd"><p>Saturday 11/3: {{ when }}</p></div>
+          <div class="when-eve"><p>Sunday 11/4: {{ when-sun }}</p></div>
+          <div class="when-odd"><p>Monday 11/5: {{ when-mon }}</p></div>
+          <div class="when-eve"><p>Beyond: {{ when-beyond }}</p></div>
+          <hr/>
+          <p>{{ description }}</p>
+          <hr/>
+          <p>Contact: {{ contact_info }}</p>            
+          <p>More info/source: <a href="{{ info_url }}">{{ info_url }}</a></p>
+          <div class="social">Share this activity:
+            <ul class="sharing">
+              <li class="share-link share-twitter"><a href="https://twitter.com/intent/tweet?source=webclient&text={{ permalink }}" target="_blank">Tweet This</a></li>
+              <li class="share-link share-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ permalink }}" target="_blank">Recommend on Facebook</a></li>
+            </ul>
           </div>
-          {{/ items }}
+          <br/><br/><hr/>
         </section>
 
         {{#survey_config}}
