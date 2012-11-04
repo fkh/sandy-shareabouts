@@ -11,9 +11,9 @@ app:
 map:
   options:
     center:
-      lat: 40.784896
-      lng: -73.976026
-    zoom: 10
+      lat: 40.684896
+      lng: -73.9
+    zoom: 11
     minZoom: 9
     maxZoom: 17
   base_layer:
